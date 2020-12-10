@@ -27,20 +27,8 @@ class Tts {
   String voiceAndroid = 'Paulina';
   dynamic voices;
   dynamic languages;
-  bool playRW = false;
-  bool _right = false;
 
-  List<String> voicesIos =[
-    //spanish
-    'Jorge',
-    'Marisol',
-    'Mónica',
-    //mexican
-    'Angelica',
-    'Juan',
-    'Paulina',
 
-  ];
 
 
   getVoicesListIos(){
@@ -196,18 +184,6 @@ class Tts {
   Future<int> _pause() async {
     var result = await flutterTts.pause();
     return result;
-  }
-
-  void setVoiceIos(int i) {
-    voiceIos = voicesIos[i];
-  }
-
-  void setSpeechRateIos(double value) {
-    rateIos = value;
-  }
-
-  void setPitchRateIos(double value) {
-    pitchIos = value;
   }
 
 
